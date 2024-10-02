@@ -1,10 +1,14 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Sep 30 20:51:27 2024
+# Kaylie Capurro
+# PSY 627
+# Professor Lescroart
+# 10/1/24
+# Code Assignment 2
 
-@author: kcapurro
-"""
+# Create a proto-experiment with multiple different blocks within it, in which 
+# the type of stimulus shown changes. You have three different options for what kind 
+# of stimuli to work with.
+
+# Option 3: Moving Dots (Figure out how to UPDATE moving dots!)
 
 from psychopy import visual, core, event
 import numpy as np 
@@ -109,7 +113,7 @@ def expanding(duration, expansion_speed=3):
     
     
  # function to run blocks
-def run_block(duration, stimulus_function, gap=3):
+def run_block(duration, stimulus_function, gap=2):
     stimulus_function(duration)
     core.wait(gap)
     

@@ -1,3 +1,8 @@
+# Kaylie Capurro
+# 10/1/24
+# Professor Lescroart
+# Participation Code 2
+
 # Python tiing functions
 import psychopy
 from psychopy import visual, core
