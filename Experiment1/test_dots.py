@@ -109,7 +109,7 @@ def expanding(duration, expansion_speed=3):
     
     
  # function to run blocks
-def run_block(duration, stimulus_function, gap=3):
+def run_block(duration, stimulus_function, gap=2):
     stimulus_function(duration)
     core.wait(gap)
     
