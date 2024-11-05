@@ -49,6 +49,10 @@ instructions.draw()
 win.flip()
 event.waitKeys()  # wait for any key to continue
 
+def get_reponse():
+    keys = event.waitKeys()
+    return keys
+
 
 def choose_keys():
     button_choice = None
@@ -69,6 +73,7 @@ def choose_keys():
             confirm.draw()
             win.flip()
 
+            
             keys = event.waitKeys()  # Wait for confirmation
 
             # Check if any keys were pressed again
@@ -98,7 +103,9 @@ def choose_keys():
 # main experiment loop
 #chosen_button = choose_keys()
 #response_key = chosen_button  #'space'  
+
 response_key = choose_keys()
+ 
 trial_clock = core.Clock()
 experiment_clock = core.Clock()
 
