@@ -8,22 +8,22 @@ subjectNumber = 1
 sname = f'subject{subjectNumber:02d}_plan.npz'
 blockRepeats = 2
 blockLength = 12 # seconds
-imageDuration = 0.5 # seconds
-imageISI = 0.1 # inter-stimulus interval, seconds
+imageDuration = 0.75 # seconds
+imageISI = 0.25 # inter-stimulus interval, seconds
 blockISI = 3 # gap between blocks, seconds
 # Block types & sub-categories (categories in alphabetical order)
 block_categories = {
-    'bodies':['limb','body'],
-    'characters':['word','number'],
-    'faces':['adult','child'],
-    'objects':['car','instrument'],
-    'places':['house','corridor'],
+    'bodies':['limb',],
+    'characters':['word',],
+    'faces':['adult',],
+    'objects':['car',],
+    #'places':['house',],
     'scrambled':['scrambled']}
 block_category_names = sorted(list(block_categories.keys()))
 # Image file location (assumes all images are in same folder, as they 
 # should be if you downloaded and unzipped fLoc from here: 
 # )
-imageFolder = pathlib.Path('~/Teaching/PSY427_627/datasets/fLoc_stimuli/')
+imageFolder = pathlib.Path('~/UNR_PSY_427_627_Fa2024/fLoc_stimuli/')
 imageFolder = imageFolder.expanduser()
 imageType = 'jpg'
 

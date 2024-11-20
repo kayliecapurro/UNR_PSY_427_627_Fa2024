@@ -14,6 +14,11 @@ def plot_timing(timing, hist_bounds=.1, hist_bins=15):
     mm = np.mean(image_time)
     bins = np.linspace(mm-hist_bounds, mm+hist_bounds, hist_bins)
     axs.hist(np.array(image_time), bins=bins)
+    plt.show()
+    # plt.draw()
+    # win.flip()
+    # core.wait(5)
+
 
 def get_response(deadline, key_list, responses, quit_keys=['escape','q'], delta=0.001):
     """Get response to any key in `key_list` and return control by `deadline`
@@ -225,9 +230,9 @@ except:
     # raise the exception that broke the try loop
     
 # Save / close file
+plot_timing(timing)
 
 # Close screen and quit
 win.close()
 core.quit()
 
-plot_timing(timing)
