@@ -6,7 +6,7 @@ from matplotlib import animation
 
 #%% Set up plot for image animation 
 
-def grating(size, freq=10, ori=0, phi=0):
+def grating(size, freq=10, ori=4, phi=0):
     """Make a grating image.
 
     Parameters
@@ -58,15 +58,15 @@ anim_grating = animation.FuncAnimation(fig, grating_anim,
                                        frames=n_frames,
                                        interval=1/fps * 1000,
                                        blit=False)
-anim_grating.save('grating_sf_0.mp4', writer='ffmpeg')
+#anim_grating.save('grating_sf_0.mp4', writer='ffmpeg')
 
 
 #%% Set up plot for function animation 
 
 fig, ax = plt.subplots()
-res = 101
+res = 151
 xx = np.linspace(0, 2 * np.pi, res)
-freq = 3
+freq = 9
 yy = np.sin(freq * xx)
 
 #scat 
@@ -77,6 +77,8 @@ ax.legend()
 #%% Define update function 
 def update(frame):
     # for each frame, update the data stored on each artist.
+    #for x in range(frame+1):
+    x+1
     x = xx[:frame]
     y = yy[:frame]
     # update the scatter plot:

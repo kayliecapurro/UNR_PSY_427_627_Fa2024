@@ -34,7 +34,7 @@ fig, axs = plt.subplots(2, 1, figsize=(12, 4))
 # Generate and plot simple frequency signal
 T = 1.0 ## define time of interval, for simplicity 1 second, but this will work with other (integer) durations
 fs = 1000 ## Sampling frequency
-N = fs * T ## number of points (frequency * time)
+N = int(fs * T) ## number of points (frequency * time)
 
 signal_freq = [6, 28]
 values = [2, 6.2]
